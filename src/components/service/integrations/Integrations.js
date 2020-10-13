@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { FiAnchor, FiCode, FiSlack } from 'react-icons/fi';
-import { FaDiscord } from 'react-icons/fa';
+import { FiCode, FiSlack } from 'react-icons/fi';
+import { FaDiscord, FaEnvelope } from 'react-icons/fa';
 
 import InputField from 'components/UI/inputField/InputField';
 import Card, { Header, Title } from 'components/UI/card/Card';
@@ -104,16 +104,16 @@ const Integrations = (props) => {
         <Card>
             <Header icon={<FiCode />}>Integrations</Header>
             
-            <Title icon={<FiAnchor />}>Webhooks</Title>
+            <Title icon={<FaEnvelope />}>Email</Title>
             
             <p className={styling.caption}>
-                If provided, all error events will be sent to the webhook URL as POST request.
+                If provided, all error events will be sent to this email.
             </p>
             
             <InputField
                 value={webhookURL}
                 onChange={({ target }) => setState(prevState => ({ ...prevState, webhookURL: target.value }))}
-                placeholder='Webhook URL'
+                placeholder='Email'
             />
             
             <Title icon={<FaDiscord />}>Discord</Title>
