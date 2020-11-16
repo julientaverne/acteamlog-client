@@ -9,6 +9,10 @@
   </p>
 </div>
 
+
+npm start
+
+
 ---
 
 **Related Repositories:**
